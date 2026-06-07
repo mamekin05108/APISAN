@@ -7,7 +7,7 @@ class CustomerQuerySerializer(serializers.Serializer):
     customer_id = serializers.CharField(max_length=100)
     # 送信先選択用のフィールドを追加（デフォルト値は 'none'）
     action_type = serializers.ChoiceField(
-        choices=[("A", "A先"), ("B", "B先"), ("none", "保存のみ")],
+        choices=[("A", "商用先"), ("B", "商接先"), ("none", "保存のみ")],
         default="none",
         required=False,
     )
